@@ -4,12 +4,18 @@
 @use "@infragistics/igniteui-angular/theming" as *;
 
 @include core();
-@include typography();
-@include light-theme($light-material-palette);
+@include typography($font-family: "Source Sans 3");
+
+$custom-palette: palette(
+  $primary: #9BC3B7,
+  $secondary: #E30034,
+  $surface: #F4F2F3);
+@include theme($palette: $custom-palette, $roundness: 0);
 
 body {
   background: var(--ig-surface-500);
   color: var(--ig-surface-500-contrast);
+  --ig-size: var(--ig-size-small);
 }
 
 html, body {

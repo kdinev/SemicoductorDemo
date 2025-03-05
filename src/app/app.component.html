@@ -8,7 +8,7 @@
   </igx-navbar-action>
   <igx-navbar-title class="navbar-content">
     <h6 class="h6">
-      App Name
+      Semiconductor Processes
     </h6>
   </igx-navbar-title>
   <button igxRipple igxIconButton="flat">
@@ -30,17 +30,11 @@
 <div class="row-layout group">
   <igx-nav-drawer [isOpen]="true" [pin]="true" width="320px" #navDrawer class="nav-drawer">
     <ng-template igxDrawer>
-      <div igxDrawerItem igxRipple [routerLink]="['/view-1']">
-        <igx-icon class="icon">
-          home
-        </igx-icon>
-        <span>View 1</span>
-      </div>
-      <div igxDrawerItem igxRipple [routerLink]="['/view-2']">
+      <div igxDrawerItem igxRipple [routerLink]="['/process-and-states']">
         <igx-icon class="icon">
           dns
         </igx-icon>
-        <span>View 2</span>
+        <span>Units with Process States</span>
       </div>
       <div igxDrawerItem igxRipple [routerLink]="['/view-3']">
         <igx-icon class="icon">

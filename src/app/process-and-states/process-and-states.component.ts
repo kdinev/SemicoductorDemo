@@ -1,19 +1,19 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { IGX_CARD_DIRECTIVES, IGX_DIALOG_DIRECTIVES, IGX_GRID_DIRECTIVES, IGX_LIST_DIRECTIVES, IgxButtonDirective, IgxDialogComponent, IgxIconButtonDirective, IgxIconComponent, IgxRippleDirective } from '@infragistics/igniteui-angular';
 import { Subject, take, takeUntil } from 'rxjs';
-import { Semiconductor } from '../models/live-apisemiconductor/semiconductor';
-import { Process } from '../models/live-apisemiconductor/process';
 import { Test } from '../models/live-apisemiconductor/test';
 import { Outcome } from '../models/live-apisemiconductor/outcome';
+import { Semiconductor } from '../models/live-apisemiconductor/semiconductor';
+import { Process } from '../models/live-apisemiconductor/process';
 import { LiveAPISemiconductorService } from '../services/live-apisemiconductor.service';
 
 @Component({
-  selector: 'app-view-2',
+  selector: 'app-process-and-states',
   imports: [IGX_DIALOG_DIRECTIVES, IGX_LIST_DIRECTIVES, IGX_GRID_DIRECTIVES, IGX_CARD_DIRECTIVES, IgxIconButtonDirective, IgxIconComponent, IgxButtonDirective, IgxRippleDirective],
-  templateUrl: './view-2.component.html',
-  styleUrls: ['./view-2.component.scss']
+  templateUrl: './process-and-states.component.html',
+  styleUrls: ['./process-and-states.component.scss']
 })
-export class View2Component implements OnInit, OnDestroy {
+export class ProcessAndStatesComponent implements OnInit, OnDestroy {
   @ViewChild('dialog', { static: true, read: IgxDialogComponent})
   private dialog?: IgxDialogComponent;
 
