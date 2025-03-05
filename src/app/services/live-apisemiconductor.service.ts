@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, of } from 'rxjs';
-import { Semiconductor } from '../models/live-apisemiconductor/semiconductor';
-import { Process } from '../models/live-apisemiconductor/process';
 import { Test } from '../models/live-apisemiconductor/test';
 import { Outcome } from '../models/live-apisemiconductor/outcome';
+import { Semiconductor } from '../models/live-apisemiconductor/semiconductor';
+import { Process } from '../models/live-apisemiconductor/process';
 import { ErrorHandlerService } from './error-handler.service';
 
 const API_ENDPOINT = 'https://localhost:7173';
