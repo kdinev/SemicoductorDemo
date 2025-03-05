@@ -5,3 +5,9 @@
   align-items: stretch;
   align-content: flex-start;
 }
+.category-chart {
+  min-width: 400px;
+  min-height: 300px;
+  flex-grow: 1;
+  flex-basis: 0;
+}

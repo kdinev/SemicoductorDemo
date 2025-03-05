@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, of } from 'rxjs';
-import { Test } from '../models/live-apisemiconductor/test';
-import { Outcome } from '../models/live-apisemiconductor/outcome';
 import { Semiconductor } from '../models/live-apisemiconductor/semiconductor';
+import { TestAggragate } from '../models/live-apisemiconductor/test-aggragate';
+import { Test } from '../models/live-apisemiconductor/test';
 import { Process } from '../models/live-apisemiconductor/process';
+import { Outcome } from '../models/live-apisemiconductor/outcome';
 import { ErrorHandlerService } from './error-handler.service';
 
 const API_ENDPOINT = 'https://localhost:7173';
@@ -44,5 +45,10 @@ export class LiveAPISemiconductorService {
     }
     return this.http.get<Outcome[]>(`${API_ENDPOINT}/Outcomes/test/${testId}`)
       .pipe(catchError(ErrorHandlerService.handleError<Outcome[]>('getOutcomeList', [])));
+  }
+
+  public getTestAggragateList(): Observable<TestAggragate[]> {
+    return this.http.get<TestAggragate[]>(`${API_ENDPOINT}/Tests/aggregated`)
+      .pipe(catchError(ErrorHandlerService.handleError<TestAggragate[]>('getTestAggragateList', [])));
   }
 }

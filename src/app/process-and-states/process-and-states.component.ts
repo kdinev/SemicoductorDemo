@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { IGX_CARD_DIRECTIVES, IGX_DIALOG_DIRECTIVES, IGX_GRID_DIRECTIVES, IGX_LIST_DIRECTIVES, IgxButtonDirective, IgxDialogComponent, IgxIconButtonDirective, IgxIconComponent, IgxRippleDirective } from '@infragistics/igniteui-angular';
 import { Subject, take, takeUntil } from 'rxjs';
-import { Test } from '../models/live-apisemiconductor/test';
-import { Outcome } from '../models/live-apisemiconductor/outcome';
 import { Semiconductor } from '../models/live-apisemiconductor/semiconductor';
+import { Test } from '../models/live-apisemiconductor/test';
 import { Process } from '../models/live-apisemiconductor/process';
+import { Outcome } from '../models/live-apisemiconductor/outcome';
 import { LiveAPISemiconductorService } from '../services/live-apisemiconductor.service';
 
 @Component({
@@ -88,7 +88,7 @@ export class ProcessAndStatesComponent implements OnInit, OnDestroy {
   }
 
   public rowSelectionChangingGrid($event: any): void {
-    this.selectedTest = $event.newSelection;
     this.dialog?.toggle();
+    this.selectedTest = $event.newSelection;
   }
 }
